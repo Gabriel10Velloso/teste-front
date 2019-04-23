@@ -1,0 +1,78 @@
+<!-- HEADER DIALOG ADD CARD -->
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Add Card</span>
+        <span class="spacer-header"></span>
+        <mat-icon (click)="onNoClick()" class="icon-close">cancel</mat-icon>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- BODY DIALOG ADD CARD  >>FlexLayoutModule<< -->
+<div class="box-modal">
+    <form  [formGroup]="ecommerceForm" (submit)="onSubmit()">
+        <div gdAreas.xs="title | subtitle | img | img2 | author | footer" 
+            gdRows.xs="80px 80px 80px 0px 100px"
+            gdRows="100px 100px 150px" gdGap="0px 20px"
+            gdAreas.sm="title subtitle | img img2 | author author | footer footer"
+            gdAreas.md="title subtitle | img img2 | author author | footer footer"
+            gdAreas.lg="title subtitle | img img2 | author author | footer footer"
+            gdAreas.xl="title subtitle | img img2 | author author | footer footer">
+            <!-- Title -->
+            <div class="column" gdArea="title">
+                <mat-form-field>
+                    <mat-label>Title</mat-label>
+                    <input matInput placeholder="Add Title" 
+                           [ngModel]="ecommerce.title" formControlName="title">
+                    <mat-icon matSuffix>title</mat-icon>
+                    <mat-error>Add title</mat-error>
+                </mat-form-field>
+            </div>
+             <!-- SubTitle -->
+            <div class="column" gdArea="subtitle">
+                <mat-form-field appearance="legacy">
+                    <mat-label>SubTitle</mat-label>
+                    <input matInput placeholder="Add SubTitle" [ngModel]="ecommerce.subtitle"
+                           formControlName="subtitle">
+                    <mat-icon matSuffix>subtitles</mat-icon>
+                    <mat-error>Add subtitle</mat-error>
+                </mat-form-field>
+            </div>
+            <!-- IMG -->
+            <div class="column" gdArea="img">
+                <mat-form-field appearance="legacy">
+                    <mat-label>IMG</mat-label>
+                    <input matInput placeholder="Add Img" [(ngModel)]="ecommerce.img" name="img"
+                           formControlName="img">
+                    <a matSuffix href="https://www.google.com/imghp?hl=pt-pt" target="_bllank">
+                        <mat-icon matSuffix>image_search</mat-icon>
+                    </a>
+                    <mat-error>Add img</mat-error>
+                </mat-form-field>
+            </div>
+             <!-- IMG property binding -->
+            <div class="column" gdArea="img2" fxShow.xs="false">
+                <div class="binding-img">
+                    <img [src]="ecommerce.img" alt="Add Img 😊">
+                </div>
+            </div>
+            <!-- Author -->
+            <div class="column" gdArea="author">
+                <mat-form-field appearance="legacy">
+                    <mat-label>Author</mat-label>
+                    <input matInput placeholder="Add Title" [ngModel]="ecommerce.author"
+                           formControlName="author">
+                    <mat-icon matSuffix>person_add</mat-icon>
+                    <mat-error>Add author</mat-error>
+                </mat-form-field>
+            </div>
+           <!-- Add Button -->
+            <div class="column" gdArea="footer">
+                <button class="btn-save" color="primary" [disabled]="!ecommerceForm.valid"
+                        mat-raised-button type="submit">
+                    SAVE
+                </button>
+            </div>
+
+        </div>
+    </form>
+</div>

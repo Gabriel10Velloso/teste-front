@@ -1,0 +1,117 @@
+// =====================
+//  <!-- NAV-BAR -->
+//=====================
+.nav-bar{
+    background: #e6e6e6;
+    height: 130px;
+    padding: 35px 80px;
+    overflow-x: hidden; 
+}
+
+.icon-background{
+    background: #f9f9f9;
+    height: 60px;
+    width: 80px;
+    border-radius:4px; 
+    cursor: pointer;
+}
+
+.icon-background:hover{
+    background: #e6e6e6;
+}
+
+.icon-playlist-add {
+    font-size: 60px; 
+    padding-left: 12px;
+    color: #747474;
+}
+
+
+// =====================
+//   <!-- BODY -->
+//=====================
+.container{
+    margin-top:40px; 
+    padding-left:3%;
+    overflow-x: hidden;
+}
+
+mat-card {
+  margin-bottom: 32px;
+  overflow-x: hidden;
+}
+
+.position-btn-img{
+    height: 160px; // Distance from edit + delete button to Main Title
+}
+
+.img-1919px { // img landscape 
+    height: 150px;
+}  
+
+.button-edit-remove { // edit + delete button on the card image
+  top: -45px;
+  left: 65%;
+  margin-left: 5%;
+}
+
+mat-card-title, mat-card-subtitle { // distance between title and subtitle
+    padding-top: 10px;
+}
+
+.image-byAuthor { // img minions author By Gabriel Vellso
+  background-image: url("https://www.casasbahia-imagens.com.br/brinquedos/BonecosdeBrinquedos/minions-meu-malvado-favorito/9723302/809204926/Boneco-Minion-Jumbo-Talking-Dave--40Cm-Com-Som-E-Luz---Toyng-9723302.jpg");
+  background-size: cover;
+}
+
+.title-byAuthor {
+  width: 200px;
+  margin: -30px 0px 20px 50px;
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom:10px;   
+}
+
+.title-byAuthor > a {
+  text-decoration: none;
+  color: #70b6f3;
+  font-weight: 500;
+}
+
+
+@media only screen and (max-width: 1360px ){
+    .button-edit-remove {
+        left: 60%;
+      }      
+}
+
+@media only screen and (max-width: 425px ){
+
+    .nav-bar{
+        height: 80px;
+        padding: 18px 30px;
+    }
+
+    .icon-background{
+        height: 40px;
+        width: 50px;
+    }
+    
+    .icon-playlist-add {
+        font-size: 40px; 
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (max-width: 360px ){
+    .button-edit-remove {
+        left: -5%
+      }
+      
+}
+
+.alert-btn-yes { // btn alert is in styles.scss
+    background: hsla(0, 0%, 98%, 0.479);
+    margin: 10px 0 -30px 0 ; 
+    width: 96.5%;
+}

@@ -1,0 +1,55 @@
+<!-- NAV-BAR -->
+<div fxLayout="row wrap">
+    <div class="nav-bar" fxLayoutAlign="end" fxLayoutAlign.xs="start" fxFlex="1 1 auto">
+        <div class="icon-background">
+            <mat-icon class="icon-playlist-add" (click)="createEcommerce()">playlist_add</mat-icon>
+        </div>
+    </div>
+</div>
+
+<!-- BODY ... Angular FlexLayoutModule -->
+<div class="container" fxLayout="row wrap" fxLayoutAlign="start" 
+                       fxLayoutGap.sm="32px" fxLayoutGap.md="32px"
+                       fxLayoutGap.lg="32px" fxLayoutGap.xl="32px">
+    <mat-card *ngFor="let ecommerce of ecommerces" 
+              fxFlex.xs="0 1 calc(100% - 12px)" gdRows.xs="180px auto"
+              fxFlex.sm="0 1 calc(50% - 35px)" 
+              fxFlex.md="0 1 calc(34% - 50px)" 
+              fxFlex.lg="0 1 calc(24% - 20px)"
+              fxFlex.xl="0 1 calc(20% - 35px)" gdRows.xl="180px auto">
+
+        <div class="position-btn-img">
+            <img class="img-1919px" mat-card-image [src]="ecommerce.img">
+
+            <!-- Alert before deleting card -->
+            <div class="alert" *ngIf="showalter && objcard === ecommerce.id">
+                Want to delete it? <strong>{{nameTitle}}</strong>
+                <span class="closebtn" (click)="showalter = !showalter">&times;</span> <br>
+                 <!-- Delet Button -->
+                <button mat-button class="alert-btn-yes" (click)="deleteEcommerce(ecommerce)">
+                    Yes
+                </button>
+            </div>
+             <!-- Edit Button -->
+            <button class="button-edit-remove" mat-mini-fab color="white" 
+                    (click)="editEcommerce(ecommerce)">
+                <mat-icon style="color:#8f8f8f">create</mat-icon>
+            </button>
+            <button class="button-edit-remove" mat-mini-fab color="white" 
+                   (click)="showAlter(ecommerce.id)"  (click)="getShortName(ecommerce.title)">
+                <mat-icon style="color:#8f8f8f">close</mat-icon>
+            </button>
+        </div>
+
+        <mat-card-title>{{ecommerce.title}}</mat-card-title>
+        <mat-card-subtitle>{{ecommerce.subtitle}}</mat-card-subtitle>
+
+        <div mat-card-avatar class="image-byAuthor"></div>
+        <p class="title-byAuthor">
+            <span>By</span>
+            <a> {{ecommerce.author}} </a>
+        </p>
+
+    </mat-card>
+
+</div>

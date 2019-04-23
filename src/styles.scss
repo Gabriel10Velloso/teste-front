@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+html,
+body {
+    height: 100%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: #eeeeee;
+}
+
+// ======================================
+// <!-- ALERT DIALOG RED TO DELET CARD -->
+// =======================================
+.alert {
+    margin: -170px 0px 0px -20px;
+    padding: 20px 0px 20px 10px;
+    width: 100%;
+    height: auto;
+    background-color: #ff1100;
+    color: white;
+    position: absolute;
+}
+
+.closebtn {
+    margin-left: 25px;
+    color: white;
+    font-weight: bold;
+    // float: right;
+    font-size: 25px;
+    line-height: 20px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: #000000;
+}
