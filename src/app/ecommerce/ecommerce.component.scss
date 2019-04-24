@@ -55,8 +55,10 @@ mat-card {
   margin-left: 5%;
 }
 
-mat-card-title, mat-card-subtitle { // distance between title and subtitle
+mat-card-title, mat-card-subtitle{
     padding-top: 10px;
+    width: 100%;
+    height: auto;
 }
 
 .image-byAuthor { // img minions author By Gabriel Vellso
