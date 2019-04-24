@@ -1,3 +1,6 @@
+# Exemplo Heroku Link Abaixo
+ - https://ecommerce-gabreil.herokuapp.com/ecommerce
+
 # Monte uma tela de cards com layout abaixo:
 No topo da página um button que abre uma modal para inserir um novo post:
 - Formulário com nome, titulo, descrição, imagem
