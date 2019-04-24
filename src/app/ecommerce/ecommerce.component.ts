@@ -43,7 +43,7 @@ export class EcommerceComponent implements OnInit {
     // ====================================
     createEcommerce(): void {
         const dialogRef = this.dialog.open(AddEditEcommerceComponent, {
-            width: '550px',
+            panelClass: 'custom-dialog-container',
             data: Ecommerce,
         });
         dialogRef.afterClosed().subscribe(result => {
@@ -56,7 +56,7 @@ export class EcommerceComponent implements OnInit {
     // ====================================
     editEcommerce(ecommerce) {
         const dialogRef = this.dialog.open(AddEditEcommerceComponent, {
-            width: '550px',
+            panelClass: 'custom-dialog-container',
             data: ecommerce,
         });
         dialogRef.afterClosed().subscribe(result => {

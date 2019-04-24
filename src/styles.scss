@@ -12,6 +12,14 @@ body {
     background: #eeeeee;
 }
 
+// ======================================================
+// <!-- CUSTOM-DIALOG .open AddEditEcommerceComponent -->
+// ======================================================
+ .custom-dialog-container  {
+    width: 560px;
+    overflow-y: auto;
+}
+
 // ======================================
 // <!-- ALERT DIALOG RED TO DELET CARD -->
 // =======================================
@@ -40,4 +48,12 @@ body {
 
 .closebtn:hover {
     color: #000000;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .custom-dialog-container ,.mat-dialog-container {
+        max-width: 93vw !important;
+    }
 }
